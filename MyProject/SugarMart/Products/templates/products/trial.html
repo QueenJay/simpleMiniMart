@@ -1,0 +1,35 @@
+{% extends 'basics/base.html' %}
+
+{% block content %}
+<div class = 'row'>
+        <div class = "alert alert-secondary" role= "alert"> 
+            <form class='form' method='POST' action = '.' enctype = "multipart/form-data">
+                {% csrf_token %}
+                 
+                {{form.as_p}}
+                 <button type = 'submit'> Create </button>
+         
+            </form> 
+        </div>
+    </div>
+
+    <!-- <div class = 'row'>
+       
+                <div class = "alert alert-secondary" role= "alert" float ="right"> <h6><a href= '/profiles/me/'> Back </a> </h6> 
+ 
+            </div>
+     </div>
+
+     <div class ='row'>
+        <div class = "alert alert-secondary" role= "alert" float ="right"><h6><a href= '/users/home/'> Logout </a></h6> 
+
+    </div>
+</div> -->
+    
+
+    
+    
+{% endblock %}
+
+
+   

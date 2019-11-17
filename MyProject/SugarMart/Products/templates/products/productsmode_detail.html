@@ -1,0 +1,24 @@
+{% extends 'basics/base.html' %}
+
+{% block content %}
+
+<div class='row'> 
+        <div class ='col-sm-9' mx-auto>  
+            <div class='card card-default' style = 'margin-bottom: 15px; '>
+
+<h1>    Title          :{{object.title}}</h1><br/>
+        Description    :{{object.description}} <br/>
+        Price          :${{object.price}} <br/>
+        {% if object.image %}
+                <img src = "{{MEDIA_URL}}/{{object.image}}" class = 'img-fluid' alt='{{ object.title }}'  /><br/>
+        {% else %}
+        {% endif %}
+
+         &nbsp; &nbsp; &nbsp; &nbsp;<a href = "{% url 'cat' object.pk%}">Add To Cart</a>         
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
